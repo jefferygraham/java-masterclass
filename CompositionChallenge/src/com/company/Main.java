@@ -1,0 +1,33 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Wall wall1 = new Wall("west");
+        Wall wall2 = new Wall("east");
+        Wall wall3 = new Wall("south");
+        Wall wall4 = new Wall("north");
+
+        Ceiling ceiling = new Ceiling(12, 55);
+
+        Bed bed = new Bed("modern", 4,3, 2, 1);
+
+        Lamp lamp = new Lamp("classic", false, 75);
+
+        Bedroom bedroom = new Bedroom("master", wall1, wall2, wall3, wall4, ceiling, bed, lamp);
+
+        bedroom.makeBed();
+        bedroom.getLamp().turnOn();
+
+
+
+//        Bed bed = new Bed("king");
+//        Dresser dresser = new Dresser("oak");
+//        TV tv = new TV(50);
+//
+//        Bedroom masterBedroom = new Bedroom(bed, dresser, tv);
+//
+//        masterBedroom.getTv().showSize();
+    }
+}
